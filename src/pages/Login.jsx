@@ -41,6 +41,7 @@ export default function Login() {
 
   return (
     <div className="flex items-center justify-center h-screen">
+      <p className="">Hola</p>
       <form onSubmit={handleLogin} className="bg-white p-6 rounded shadow-md">
         <h2 className="text-xl font-bold mb-4">Iniciar sesión</h2>
         <input
