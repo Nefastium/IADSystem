@@ -29,15 +29,15 @@ export default function ClienteForm({ onSave }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-4 rounded shadow mb-6">
-      <h2 className="text-lg font-semibold mb-4">Nuevo Cliente</h2>
+    <form onSubmit={handleSubmit} className="bg-white p-4 rounded shadow mb-6 dark:bg-gray-800">
+      <h2 className="text-lg font-semibold mb-4 dark:text-gray-100">Nuevo Cliente</h2>
 
       <input
         name="nombre"
         placeholder="Nombre"
         value={form.nombre}
         onChange={handleChange}
-        className="border p-2 w-full mb-2"
+        className="border p-2 w-full mb-2 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
       />
 
       <input
@@ -45,7 +45,7 @@ export default function ClienteForm({ onSave }) {
         placeholder="Teléfono"
         value={form.telefono}
         onChange={handleChange}
-        className="border p-2 w-full mb-2"
+        className="border p-2 w-full mb-2 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
       />
 
       <input
@@ -53,12 +53,12 @@ export default function ClienteForm({ onSave }) {
         placeholder="Dirección"
         value={form.direccion}
         onChange={handleChange}
-        className="border p-2 w-full mb-2"
+        className="border p-2 w-full mb-2 dark:bg-gray-700 dark:border-gray-600 dark:text-gray-100"
       />
 
       <button
         disabled={loading}
-        className="bg-blue-600 text-white px-4 py-2 rounded"
+        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition disabled:opacity-50"
       >
         {loading ? "Guardando..." : "Guardar"}
       </button>

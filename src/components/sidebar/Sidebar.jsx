@@ -4,15 +4,15 @@ export default function Sidebar() {
 
   const linkStyle = ({ isActive }) =>
   `block px-4 py-2 rounded transition ${
-    isActive ? "bg-blue-500 text-white" : "hover:bg-gray-200"
+    isActive ? "bg-blue-500 text-white " : "hover:bg-gray-200 dark:hover:bg-gray-700"
   }`;
 
   return (
-    <div className="w-64 bg-white shadow-md min-h-screen p-4">
-      <h2 className="text-xl font-bold mb-6">IADSystem</h2>
+    <div className="w-64 bg-white dark:bg-gray-950 shadow-md min-h-screen p-4">
+      <h2 className="text-xl font-bold mb-6 dark:text-gray-100">IADSystem</h2>
 
-      <nav className="space-y-2">
-        <NavLink to="/dashboard" className={linkStyle}>
+      <nav className="space-y-2 dark:text-gray-100">
+        <NavLink to="/dashboard/home" className={linkStyle}>
           🏠 Inicio
         </NavLink>
 

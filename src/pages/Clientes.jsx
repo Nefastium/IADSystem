@@ -29,7 +29,7 @@ export default function Clientes() {
   };
 
   return (
-    <div>
+    <div className="p-6 space-y-6 bg-white dark:bg-gray-900">
       <ClienteForm onSave={handleCrear} />
       <ClienteList clientes={clientes} onDelete={handleEliminar} />
     </div>

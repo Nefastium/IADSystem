@@ -1,6 +1,7 @@
 import { db } from "./firebase";
 import {
   collection,
+  getDocs,
   addDoc,
   deleteDoc,
   doc,
@@ -11,6 +12,17 @@ import {
 
 export const getTrabajosRef = (userId) => {
   return collection(db, "users", userId, "trabajos");
+};
+
+const trabajosRef = collection(db, "trabajos");
+
+export const getTrabajos = async () => {
+  const data = await getDocs(trabajosRef);
+
+  return data.docs.map((doc) => ({
+    id: doc.id,
+    ...doc.data(),
+  }));
 };
 
 export const escucharTrabajos = (userId, callback) => {
@@ -42,5 +54,5 @@ export const eliminarTrabajo = async (userId, trabajoId) => {
 
 export const actualizarTrabajo = async (userId, trabajoId, data) => {
   const trabajoRef = doc(db, "users", userId, "trabajos", trabajoId);
-  return await updateDoc(trabajoRef, data);
+  await updateDoc(trabajoRef, data);
 };

@@ -21,7 +21,7 @@ export default function DashboardLayout() {
 
       <Sidebar />
 
-      <main className="flex-1 p-6">
+      <main className="flex-1 p-0">
 
         <Topbar onNuevoTrabajo={() => setModalOpen(true)} />
 
